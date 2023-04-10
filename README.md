@@ -1,27 +1,63 @@
-# AngularShop
+# Angular Shop
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+This is a simple demo Online Shop in Angular
 
-## Development server
+##Start
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+To clone the Project paste the following code to your terminal:
+```bash
+git clone https://github.com/whoismarios/AngularShop.git
+```
 
-## Code scaffolding
+Then you have to change the directory:
+```bash
+cd AngularShop/
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Install Dependencies  
+```bash
+npm install
+```
 
-## Build
+Place the File 'get_products.php' in your Localhost 
+Folder.
+This should be the Path:
+```bash
+http://localhost/AngularShop/get_products.php
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Make sure, that you got your Database running.
+Paste the following Code to your Query Box:
 
-## Running unit tests
+```bash
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+--
+-- Datenbank: `angularShopDB`
+--
+CREATE DATABASE IF NOT EXISTS `angularShopDB` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 
-## Running end-to-end tests
+USE `angularShopDB`;
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+CREATE TABLE IF NOT EXISTS `products` (
+  `productID` int(32) NOT NULL AUTO_INCREMENT,
+  `name` varchar(64) NOT NULL,
+  `price` int(32) NOT NULL,
+  PRIMARY KEY (`productID`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-## Further help
+INSERT INTO `products` (`productID`, `name`, `price`) VALUES
+(1, 'iPhone 14 Pro Max', 1499),
+(2, 'iPhone 14 Pro', 1299),
+(5, 'iPhone 13 Pro Max', 1299),
+(6, 'iPhone 13 Pro', 1099);
+COMMIT;
+```
+or use the sql-File inside the backend/files - Folder
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+And finally you can run the serve script
+```bash
+ng serve
+```

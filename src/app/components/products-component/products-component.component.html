@@ -1,6 +1,11 @@
 <h3>Products</h3>
-<div>
-    <app-single-product-component></app-single-product-component>
-    <app-single-product-component></app-single-product-component>
-    <app-single-product-component></app-single-product-component>
+<div class="allProducts">
+  <div class="productDiv" *ngFor="let product of products">
+    <img src="../../../favicon.ico" alt="Placeholder Image">
+    <div class="box">
+      <p class="name">{{ product.name }}</p>
+      <p class="price">{{ product.price }}$</p>
+      <button>Add To Cart</button>
+    </div>
+  </div>
 </div>

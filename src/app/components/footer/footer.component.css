@@ -11,3 +11,8 @@ footer{
     justify-content: space-evenly;
     margin-top: 50px;
 }
+a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}

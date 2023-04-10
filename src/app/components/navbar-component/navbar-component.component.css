@@ -15,4 +15,16 @@
 a{
     text-decoration: none;
     color: black;
+    cursor: pointer;
+}
+.logoDiv{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+.logoDiv img {
+    margin-right: 10px;
 }
