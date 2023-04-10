@@ -2,7 +2,7 @@
 
 This is a simple demo Online Shop in Angular
 
-##Start
+## Start
 
 To clone the Project paste the following code to your terminal:
 ```bash
