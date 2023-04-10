@@ -1,0 +1,9 @@
+.titel {
+    text-align: center;
+    }
+
+.checkout {
+    position: absolute;
+    right: 100px;
+    bottom: 580px;
+}
