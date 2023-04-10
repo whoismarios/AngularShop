@@ -13,6 +13,7 @@ import { AboutMeComponent } from './routing/about-me/about-me.component';
 import { HomeComponent } from './routing/home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ContactComponent } from './routing/contact/contact.component';
+import { CartComponent } from './routing/cart/cart.component';
 
 const routes: Routes = [
 
@@ -22,7 +23,9 @@ const routes: Routes = [
   
     { path: "about", component: AboutMeComponent },
   
-    { path: "contact", component: ContactComponent }
+    { path: "contact", component: ContactComponent },
+
+    { path: "cart", component:CartComponent}
   
   ]
 
@@ -35,7 +38,8 @@ const routes: Routes = [
     SingleProductComponentComponent,
     UsernameInputComponentComponent,
     AboutMeComponent,
-    HomeComponent
+    HomeComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
