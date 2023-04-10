@@ -9,6 +9,10 @@
     cursor: pointer;
     border-bottom: 0.5px solid grey;
 }
-.navbar p:hover{
+.navbar a:hover{
     color: red;
+}
+a{
+    text-decoration: none;
+    color: black;
 }

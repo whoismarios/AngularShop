@@ -8,7 +8,23 @@ import { NavbarComponentComponent } from './components/navbar-component/navbar-c
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductsComponentComponent } from './components/products-component/products-component.component';
 import { SingleProductComponentComponent } from './components/single-product-component/single-product-component.component';
-import { UsernameInputComponentComponent } from './components/username-input-component/username-input-component.component';
+import { UsernameInputComponentComponent } from './routing/home/username-input-component/username-input-component.component';
+import { AboutMeComponent } from './routing/about-me/about-me.component';
+import { HomeComponent } from './routing/home/home.component';
+import { RouterModule, Routes } from '@angular/router';
+import { ContactComponent } from './routing/contact/contact.component';
+
+const routes: Routes = [
+
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+  
+    { path: "home", component: HomeComponent },
+  
+    { path: "about", component: AboutMeComponent },
+  
+    { path: "contact", component: ContactComponent }
+  
+  ]
 
 @NgModule({
   declarations: [
@@ -17,12 +33,18 @@ import { UsernameInputComponentComponent } from './components/username-input-com
     FooterComponent,
     ProductsComponentComponent,
     SingleProductComponentComponent,
-    UsernameInputComponentComponent
+    UsernameInputComponentComponent,
+    AboutMeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-  FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes)
+  ],
+  exports: [
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

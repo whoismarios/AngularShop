@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class UsernameInputComponentComponent {
   
   username: string = "";
+  userInput: string = "";
 
   displayUsername(){
     if(this.username !== ""){
@@ -17,7 +18,8 @@ export class UsernameInputComponentComponent {
     }
   }
 
-  updateUsername(event: Event){
-    this.username = (<HTMLInputElement>event.target).value; 
+  updateUsername(){
+    this.username = this.userInput;
+    this.userInput = "";
   }
 }
