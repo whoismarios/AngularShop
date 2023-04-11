@@ -18,6 +18,8 @@ import { ProductsServiceService } from './backend/products-service.service';
 import { ImpressumComponent } from './routing/impressum/impressum.component';
 import { DatenschutzComponent } from './routing/datenschutz/datenschutz.component';
 import { AccountComponent } from './routing/account/account.component';
+import { SignUpLoginComponent } from './components/sign-up-login/sign-up-login.component';
+import { SignUpComponent } from './routing/sign-up/sign-up.component';
 
 const routes: Routes = [
 
@@ -36,6 +38,8 @@ const routes: Routes = [
     { path: "datenschutz", component: DatenschutzComponent},
 
     { path: "account", component: AccountComponent},
+
+    { path: "account/signUp", component: SignUpComponent},
   
   ]
 
@@ -52,6 +56,7 @@ const routes: Routes = [
     ImpressumComponent,
     DatenschutzComponent,
     AccountComponent,
+    SignUpLoginComponent,
   ],
   imports: [
     BrowserModule,

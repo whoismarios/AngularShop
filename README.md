@@ -53,6 +53,14 @@ INSERT INTO `products` (`productID`, `name`, `price`) VALUES
 (2, 'iPhone 14 Pro', 1299),
 (5, 'iPhone 13 Pro Max', 1299),
 (6, 'iPhone 13 Pro', 1099);
+
+CREATE TABLE `user` (
+  `userID` int(32) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(64) NOT NULL,
+  `lastname` varchar(64) NOT NULL,
+  `email` varchar(64) NOT NULL UNIQUE,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 COMMIT;
 ```
 or use the sql-File inside the backend/files - Folder
