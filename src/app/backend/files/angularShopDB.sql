@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Erstellungszeit: 10. Apr 2023 um 22:57
+-- Erstellungszeit: 11. Apr 2023 um 14:23
 -- Server-Version: 10.4.27-MariaDB
 -- PHP-Version: 8.2.0
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `angularShopDB`
 --
+CREATE DATABASE IF NOT EXISTS `angularShopDB` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `angularShopDB`;
 
 -- --------------------------------------------------------
 
@@ -43,6 +45,20 @@ INSERT INTO `products` (`productID`, `name`, `price`) VALUES
 (5, 'iPhone 13 Pro Max', 1299),
 (6, 'iPhone 13 Pro', 1099);
 
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `user`
+--
+
+CREATE TABLE `user` (
+  `userID` int(32) NOT NULL,
+  `firstname` varchar(64) NOT NULL,
+  `lastname` varchar(64) NOT NULL,
+  `email` varchar(64) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- Indizes der exportierten Tabellen
 --
@@ -54,6 +70,13 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`productID`);
 
 --
+-- Indizes für die Tabelle `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`userID`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
 -- AUTO_INCREMENT für exportierte Tabellen
 --
 
@@ -62,6 +85,12 @@ ALTER TABLE `products`
 --
 ALTER TABLE `products`
   MODIFY `productID` int(32) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT für Tabelle `user`
+--
+ALTER TABLE `user`
+  MODIFY `userID` int(32) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
