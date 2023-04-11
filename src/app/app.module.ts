@@ -15,6 +15,8 @@ import { ContactComponent } from './routing/contact/contact.component';
 import { CartComponent } from './routing/cart/cart.component';
 import { ProductsComponent } from './routing/products/products.component';
 import { ProductsServiceService } from './backend/products-service.service';
+import { ImpressumComponent } from './routing/impressum/impressum.component';
+import { DatenschutzComponent } from './routing/datenschutz/datenschutz.component';
 
 const routes: Routes = [
 
@@ -26,7 +28,11 @@ const routes: Routes = [
   
     { path: "contact", component: ContactComponent },
 
-    { path: "cart", component:CartComponent}
+    { path: "cart", component:CartComponent},
+
+    { path: "impressum", component: ImpressumComponent },
+
+    { path: "datenschutz", component: DatenschutzComponent},
   
   ]
 
@@ -40,6 +46,8 @@ const routes: Routes = [
     HomeComponent,
     CartComponent,
     ProductsComponent,
+    ImpressumComponent,
+    DatenschutzComponent,
   ],
   imports: [
     BrowserModule,
