@@ -14,12 +14,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContactComponent } from './routing/contact/contact.component';
 import { CartComponent } from './routing/cart/cart.component';
 import { ProductsComponent } from './routing/products/products.component';
-import { ProductsServiceService } from './backend/products-service.service';
+import { ProductsServiceService } from './backend/services/product-service/products-service.service';
 import { ImpressumComponent } from './routing/impressum/impressum.component';
 import { DatenschutzComponent } from './routing/datenschutz/datenschutz.component';
 import { AccountComponent } from './routing/account/account.component';
 import { SignUpLoginComponent } from './components/sign-up-login/sign-up-login.component';
 import { SignUpComponent } from './routing/sign-up/sign-up.component';
+import { NewUserServiceService } from './backend/services/new-user-service/new-user-service.service';
 
 const routes: Routes = [
 
@@ -57,6 +58,7 @@ const routes: Routes = [
     DatenschutzComponent,
     AccountComponent,
     SignUpLoginComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +71,8 @@ const routes: Routes = [
     RouterModule,
   ],
   providers: [
-    ProductsServiceService
+    ProductsServiceService,
+    NewUserServiceService
   ],
   bootstrap: [AppComponent]
 })
