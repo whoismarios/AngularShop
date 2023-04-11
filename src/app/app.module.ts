@@ -17,6 +17,7 @@ import { ProductsComponent } from './routing/products/products.component';
 import { ProductsServiceService } from './backend/products-service.service';
 import { ImpressumComponent } from './routing/impressum/impressum.component';
 import { DatenschutzComponent } from './routing/datenschutz/datenschutz.component';
+import { AccountComponent } from './routing/account/account.component';
 
 const routes: Routes = [
 
@@ -33,6 +34,8 @@ const routes: Routes = [
     { path: "impressum", component: ImpressumComponent },
 
     { path: "datenschutz", component: DatenschutzComponent},
+
+    { path: "account", component: AccountComponent},
   
   ]
 
@@ -48,6 +51,7 @@ const routes: Routes = [
     ProductsComponent,
     ImpressumComponent,
     DatenschutzComponent,
+    AccountComponent,
   ],
   imports: [
     BrowserModule,
