@@ -1,17 +1,19 @@
 <div>
-    <h3>Sign Up</h3>
-    <div class="loginDiv">
-      <form class="loginForm" (ngSubmit)="onSubmit(signUpForm.value)" #signUpForm="ngForm">
-        <input type="text" name="firstname" placeholder="Firstname" required ngModel>
-        <input type="text" name="lastname" placeholder="Lastname" required ngModel>
-        <input type="email" name="email" id="email" placeholder="E-Mail" required ngModel>
-        <input type="password" id="password" placeholder="Password" required ngModel>
-        <button type="submit" class="loginBtn">Sign Up</button>
-      </form>
-    </div>
-    <h3>or back to</h3>
-    <br><br>
-    <div class="signUpDiv">
-      <a (click)="goToAccount()">Login</a>
-    </div>
-  </div> 
+  <h3>Sign Up</h3>
+  <div class="loginDiv">
+    <form class="loginForm" (ngSubmit)="onSubmit(signUpForm)" #signUpForm="ngForm">
+
+      <input type="text" placeholder="Firstname" required [(ngModel)]="user.firstname" [ngModelOptions]="{standalone: true}" />
+      <input type="text" placeholder="Lastname" required [(ngModel)]="user.lastname" [ngModelOptions]="{standalone: true}" />
+      <input type="email" id="email" placeholder="E-Mail" required [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}" />
+      <input type="password" id="password" placeholder="Password" required [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" />
+      
+      <button type="submit" class="loginBtn">Sign Up</button>
+    </form>
+  </div>
+  <h3>or back to</h3>
+  <br><br>
+  <div class="signUpDiv">
+    <a (click)="goToAccount()">Login</a>
+  </div>
+</div> 

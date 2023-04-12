@@ -10,6 +10,6 @@ export class NewUserServiceService {
   constructor(private http: HttpClient) { }
 
   createNewUser(user: any): Observable<any>{
-    return this.http.post<any>('http://localhost/AngularShop/new_user.php', user);
+    return this.http.post<any>('http://localhost:80/AngularShop/new_user.php', user);
   }
 }
